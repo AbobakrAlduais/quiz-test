@@ -1,0 +1,42 @@
+<h3>Quiz</h3>
+{{#each questins}}
+<form action="/quiz/{{id}}" method="post">
+<li>
+    
+    <p>{{body}}</p>
+    
+    {{#each options}}
+    <div>
+      
+        <input type="radio" name="answer"  value={{A}} />
+        <label >A){{A}}</label>
+    </div>
+    
+    
+    <div>
+        <input type="radio" name="question-1-answers" value={{B}} />
+        <label >B) {{B}}</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-1-answers" value={{C}} />
+        <label >D){{D}} </laDel>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-1-answers" id="question-1-answers-D" value={{D}} />
+        <label >D){{D}} </laDel>
+    </div>
+    {{/each}}
+</li>
+<button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{{/each}}
+<br/>
+<form action="/finish" method="get">
+<button type="submit" class="btn btn-primary">Finish</button>
+</form>
+<br/>
+<form action="/again" method="get">
+<button type="submit" class="btn btn-primary">Play Again</button>
+</form>
